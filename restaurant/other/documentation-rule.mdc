@@ -1,0 +1,58 @@
+---
+description: Rule for documentation and feedback practices
+globs:
+alwaysApply: true
+---
+
+# Documentation & Feedback Rule
+
+## Purpose
+Ensure all architectural decisions, feedback, and learning materials are documented in proper files within the `docs/` folder structure.
+
+## Documentation Folder Structure
+
+```
+docs/
+├── architecture/           # Architecture decisions and plans
+│   ├── ARCHITECTURE_PLAN.md
+│   └── decisions/          # Architecture Decision Records (ADRs)
+│       └── ADR-001-*.md
+│
+├── feedback/               # AI feedback and suggestions
+│   └── YYYY-MM-DD-topic.md
+│
+├── learning/               # Learning materials and guides
+│   ├── FLUTTER_GUIDE.md
+│   └── ARCHITECT_CHECKLIST.md
+│
+└── api/                    # API documentation
+    └── endpoints.md
+```
+
+## Rules
+
+1. **Never provide long feedback in chat** - Always write to a file in `docs/feedback/`
+
+2. **Architecture plans go in `docs/architecture/`**
+
+3. **Learning materials go in `docs/learning/`**
+
+4. **Use meaningful file names** with dates where applicable: `YYYY-MM-DD-topic.md`
+
+5. **Update existing documents** rather than creating duplicates
+
+6. **Cross-reference documents** using relative links
+
+## File Naming Conventions
+
+- Use UPPERCASE for main documents: `ARCHITECTURE_PLAN.md`
+- Use kebab-case for dated files: `2026-03-16-nfr-feedback.md`
+- Use ADR format for decisions: `ADR-001-state-management.md`
+
+## When to Create Documentation
+
+- Architecture decisions that affect multiple features
+- Feedback that spans more than 2-3 paragraphs
+- Learning materials and guides
+- API contracts and specifications
+- Code review findings and patterns
